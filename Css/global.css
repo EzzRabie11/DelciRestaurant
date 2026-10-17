@@ -1,0 +1,235 @@
+html::-webkit-scrollbar {
+    width: 12px;
+}
+html::-webkit-scrollbar-thumb {
+    background-color:var(--main-color);
+    border-radius: 10px;
+    height: 5px;
+    cursor: pointer;
+}
+html::-webkit-scrollbar-track {
+    background-color:#2C2C2C ;
+}
+::selection {
+    background-color: var(--main-color);
+    color: black;
+}
+body{
+    scroll-behavior: smooth;
+    color: white;
+    background-color: #0E0D0C;
+    background-image:url("../images/bg.png");
+}
+
+:root{
+--main-color:rgb(228, 197, 144);
+--p-color:#A7A7A7;
+}
+p {
+    font-family: DM Sans, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Forum;
+}
+section {
+    padding: 100px 0px;
+}
+
+.title {
+color: var(--main-color);
+text-align: center;
+
+}
+.title h6 {
+    letter-spacing: 2px;
+}
+.title .titleImage {
+    width: 120px;
+}
+.globalButton {
+    padding: 11px 38px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+}
+.globalButton::before,
+.globalButton::after{
+    content: "";
+    transition-duration: .5s;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    background-color: var(--main-color);
+    position: absolute;
+}
+.globalButton::before {
+    top: -50%;
+}
+.globalButton::after {
+    bottom: -50%;
+}
+
+.globalButton:hover::before {
+    top: 0;
+}
+
+.globalButton:hover::after {
+    bottom: 0;
+}
+
+.globalButton span {
+    position: relative;
+    color: var(--main-color);
+    z-index: 2;
+    font-size: 16px;
+    letter-spacing: 1.4px;
+    transition-duration: .5s;
+}
+.globalButton:hover span{
+    color: black;
+}
+ .exitIcon {
+    position: absolute; /*  relative to the side bar that takes position absolute */
+    top: 20px;
+    right: 20px;
+    font-size: 23px;
+    margin-top: 0px;
+    cursor: pointer;
+    color: var(--main-color);
+}
+.rotatingSquare {
+    display: block;
+    height: 10px;
+    min-width: 10px;
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    animation-name: rotatingSquare;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+.underline {
+    color: var(--main-color);
+    position: relative;
+    cursor: pointer;
+}
+.underline::before {
+    position: absolute;
+    bottom: -8px;
+    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 0%;
+    height: 5px;
+    background-color: transparent;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    transition-duration: .5s;
+}
+.underline:hover::before {
+    width: 100%; 
+}
+ .popup .box {
+    position: absolute;
+    width: 600px;
+    background-color: #171819;
+    padding: 30px;
+    top: -100%;
+    transition-duration: 1s;
+}
+.popup.show .box {
+    position: absolute;
+    top: 15px;
+}
+
+ .popup .box .exitIcon {
+    font-size: 20px;
+}
+ .popup {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+    overflow: auto;
+    transition-duration: .5s;
+}
+.popup.show {
+    background-color: rgba(228, 197, 144, .5);
+}
+.popup.active{
+    display: flex;
+}
+.popup::-webkit-scrollbar {
+    /* used for chrome and edge browsers ,this is a selector that selects the scroller of the sidebar*/
+    display: none;
+}
+.contentLoad{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    transition-duration: 1.5s;
+}
+.contentLoad.hide{
+    opacity: 0;
+}
+.contentLoad .box .DELICI {
+    letter-spacing: 5px;
+}
+.contentLoad .box span.contentCircle {
+display: block;
+width: 100px;
+height: 100px;
+background-color: transparent;
+border: 4px solid white;
+border-top: 4px solid black;
+border-radius: 50%;
+animation-name: rotatingCircleDOM;
+animation-duration: 1s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+
+}
+.contentLoad .box span.letters{
+    font-size: 80px;
+    color: black;
+    animation-name: rotateParagraph;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    position: absolute;
+    opacity: 0;
+    transform: rotateY(90deg);
+    font-weight: 500;
+}
+.contentLoad .box span.borderLetter{
+    font-size: 80px;
+    font-weight: 500;
+    color:transparent;
+    -webkit-text-stroke: 1px black;
+}
+.contentLoad .box span.letters.E{
+    animation-delay: .2s;
+}
+.contentLoad .box span.letters.L{
+    animation-delay: .4s;
+}
+.contentLoad .box span.letters.I{
+    animation-delay: .6s;
+}
+.contentLoad .box span.letters.C{
+    animation-delay: .8s;
+}
+.contentLoad .box span.letters.I.last{
+    animation-delay: 1s;
+}
