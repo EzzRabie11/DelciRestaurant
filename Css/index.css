@@ -176,6 +176,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-duration: .5s;
+}
+#Home .buttonsLeftAndRight button:hover {
+background-color: var(--main-color);
+}
+#Home .buttonsLeftAndRight button i{
+    transition-duration: .5s;
+}
+#Home .buttonsLeftAndRight button:hover i{
+    color: black;
 }
 
 #Home .buttonsLeftAndRight button.next {
