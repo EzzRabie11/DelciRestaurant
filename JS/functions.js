@@ -1,9 +1,7 @@
 function changingActiveSideBarAnchor(a, span) {
-  let lastActiveSpan = document.querySelector(
-    ".sideBar li a span.rotatingSquare",
-  );
-  (lastActiveSpan.classList.remove("rotatingSquare", "me-2"),
-    (OldActiveAnchor = document.querySelector(".sideBar li a.active")));
+  let lastActiveSpan = document.querySelector(".sideBar li a span.rotatingSquare");
+  lastActiveSpan.classList.remove("rotatingSquare", "me-2");
+  let OldActiveAnchor = document.querySelector(".sideBar li a.active");
   OldActiveAnchor.classList.remove("active");
   a.classList.add("active");
   span.classList.add("rotatingSquare", "me-2");
@@ -15,7 +13,14 @@ function updateNavLinks(sectionId) {
     sectionHeight = section.clientHeight,
     sectionBottom = sectionTop + sectionHeight;
   if (window.scrollY > sectionTop && window.scrollY < sectionBottom) {
-    let navLinkOfSection = document.querySelector(`a[href="#${sectionId}"]`),
+    let NavbarLink = document.querySelector(`nav a[href="#${sectionId}"]`),
+    lastNavbarLink = document.querySelector("nav a.active");
+    lastNavbarLink.classList.remove("active","fixedUnderline");
+    NavbarLink.classList.add("active","fixedUnderline");
+    // for the sidebar links changing
+
+
+    let navLinkOfSection = sideBar.querySelector(`a[href="#${sectionId}"]`),
       navlinkSpan = navLinkOfSection.querySelector("span"),
       currentNavLink = sideBar.querySelector("a.active"),
       currentRotatingSpan = currentNavLink.querySelector("span");

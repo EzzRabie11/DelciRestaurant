@@ -1,4 +1,7 @@
-let carouselButtons = document.querySelectorAll("#Home .carouselInner .carousel_buttons span"),
+let carouselButtons = document.querySelectorAll("#Home .carousel_buttons span"),
+  carouselInner = document.querySelector("#Home .carouselInner"),
+  carouselNextButton=document.querySelector("#Home button.next"),
+  carouselPrevButton=document.querySelector("#Home button.prev"),
   carouselItems = document.querySelectorAll("#Home .carouselInner .carouselItem"),
   sideBar = document.querySelector("#Home .sideBar"),
   sideBarButton = document.querySelector("#Home .sideBar .sideBarExit"),
@@ -13,7 +16,7 @@ let carouselButtons = document.querySelectorAll("#Home .carouselInner .carousel_
   menubarDrinksButton = document.querySelector("#Menu .menuBar ul #Drinks"),
   menuItemsPart1 = document.querySelector("#Menu .part1 .part1Item"),
   menuItemsPart2 = document.querySelector("#Menu .part2 .part2Item"),
-  sections = document.querySelectorAll("section,header");
+  sections=document.querySelectorAll("section,header");
 
   //  runs on start
 toggleActiveBetweenLi("BreakFast");
@@ -49,7 +52,7 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 sideBarLiA.forEach(function (a) {
-  let span = document.querySelector(`.sideBar li ${a} span`);
+  let span = document.querySelector(` span`);
   a.addEventListener("click", function (e) {
     e.preventDefault();
     closePopup();
@@ -61,6 +64,25 @@ sideBarLiA.forEach(function (a) {
     }, 500);
   });
 });
+carouselNextButton.addEventListener("click",function(){
+
+  let currentSlider=carouselInner.querySelector(".carouselItem.active"),
+  nextSlider=currentSlider.nextElementSibling??carouselInner.querySelector(".carouselItem:first-child");
+  currentSlider.classList.add("hide");
+ setTimeout(function () {
+      currentSlider.classList.remove("active","hide");
+      nextSlider.classList.add("active");
+    }, 100);
+})
+carouselPrevButton.addEventListener("click",function(){
+  let currentSlider=carouselInner.querySelector(".carouselItem.active"),
+  prevSlider=currentSlider.previousElementSibling??carouselInner.querySelector(".carouselItem:last-child");
+ currentSlider.classList.add("hide");
+ setTimeout(function () {
+      currentSlider.classList.remove("active","hide");
+      prevSlider.classList.add("active");
+    }, 100);
+})
 carouselButtons.forEach(function (button) {
   button.addEventListener("click", function () {
     let currentId = button.id,
@@ -101,5 +123,3 @@ menubarDrinksButton.addEventListener("click", function () {
   toggleActiveBetweenLi("Drinks");
   menuRow(Drinks);
 });
-
-

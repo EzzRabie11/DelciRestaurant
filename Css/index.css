@@ -28,10 +28,9 @@
 #Nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px
+    font-size: 16px
 }
-
-#Nav ul li a:hover {
+#Nav ul li a.active{
     color: var(--main-color);
 }
 
@@ -54,7 +53,6 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-duration: .5s;
-
 }
 
 #Nav .navButton span:nth-of-type(2) {
@@ -164,7 +162,33 @@
 #Home .popup .sideBar .item span.underline {
     font-size: 30px;
 }
+#Home .buttonsLeftAndRight button {
+    background-color: #171819;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#Home .buttonsLeftAndRight button.next {
+    right: 20px;
+}
+
+#Home .buttonsLeftAndRight button.prev {
+    left: 20px;
+}
+
+#Home .buttonsLeftAndRight button i {
+    transform: rotate(-45deg);
+}
 #Home .carouselItem {
     background-position: center;
     background-repeat: no-repeat;
@@ -285,7 +309,7 @@
     display: block;
 }
 
-#Home .carouselInner .carousel_buttons {
+#Home .carousel_buttons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,14 +320,14 @@
     column-gap: 10px;
 }
 
-#Home .carouselInner .carousel_buttons span {
+#Home .carousel_buttons span {
     width: 15px;
     height: 15px;
     background-color: white;
     cursor: pointer;
 }
 
-#Home .carouselInner .carousel_buttons span.active {
+#Home .carousel_buttons span.active {
     background-color: var(--main-color);
 } 
 /*                               Book a table Popup (the other properties takes it from global) */

@@ -41,7 +41,7 @@ font-size:40px;
 #Home .bookTable .box span{
     font-size: 10px;
 }
-#Home .carouselInner .carousel_buttons span {
+#Home .carousel_buttons span {
     width: 10px;
     height: 10px;
 }
@@ -194,12 +194,13 @@ font-size: 14px;
 .popup .box .imageContainer .dishPrice h5 {
     font-size: 16px;
 }
-.popup .box .imageContainer button {
+.popup .box .imageContainer button ,
+#Home .buttonsLeftAndRight button {
     width: 30px;
     height: 30px;
-
 }
-.popup .box .imageContainer button i {
+.popup .box .imageContainer button i ,
+#Home .buttonsLeftAndRight button i {
     font-size: 13px;
 }
 
@@ -274,7 +275,8 @@ font-size: 15px;
 .popup .box .imageContainer .dishPrice {
     padding: 5px 10px;
 }
-.popup .box .imageContainer button {
+.popup .box .imageContainer button ,
+#Home .buttonsLeftAndRight button {
     width: 30px;
     height: 30px;
 }
@@ -355,7 +357,8 @@ width: 400px;
 .popup .box .imageContainer .dishPrice h5 {
     font-size: 20px;
 }
-.popup .box .imageContainer button {
+.popup .box .imageContainer button ,
+#Home .buttonsLeftAndRight button {
     width: 40px;
     height: 40px;
 }
@@ -441,7 +444,8 @@ font-size: 16px;
 .popup .box .imageContainer {
     height: 300px;
 }
-.popup .box .imageContainer button i {
+.popup .box .imageContainer button i ,
+#Home .buttonsLeftAndRight button i {
     font-size: 16px;
 }
 }

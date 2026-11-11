@@ -102,6 +102,7 @@ text-align: center;
 .rotatingSquare {
     display: block;
     height: 10px;
+    width: 10px;
     min-width: 10px;
     background-color: transparent;
     border: 2px solid var(--main-color);
@@ -110,12 +111,17 @@ text-align: center;
     animation-iteration-count: infinite;
     animation-duration: 10s;
 }
-.underline {
+.underline ,
+.fixedUnderline {
     color: var(--main-color);
     position: relative;
     cursor: pointer;
 }
-.underline::before {
+.underline {
+    color: white;
+}
+.underline::before ,
+.fixedUnderline::before {
     position: absolute;
     bottom: -8px;
     margin: auto;
@@ -128,6 +134,9 @@ text-align: center;
     border-top: 1px solid var(--main-color);
     border-bottom: 1px solid var(--main-color);
     transition-duration: .5s;
+}
+.fixedUnderline::before {
+    width: 100%;
 }
 .underline:hover::before {
     width: 100%; 
