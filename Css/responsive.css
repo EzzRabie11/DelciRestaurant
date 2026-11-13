@@ -22,7 +22,7 @@ font-size:40px;
 #Home .carouselItem .content p {
     font-size: 12px;
 }
-.sideBar {
+#Home .popup .sideBar {
     width: 280px;
 }
 .globalButton {
@@ -45,40 +45,40 @@ font-size:40px;
     width: 10px;
     height: 10px;
 }
-.sideBar{
+#Home .popup .sideBar {
     width: 280px;
 }
-.sideBar .item {
+#Home .popup .sideBar .item {
     width: 75%;
     margin: auto;
 }
  .exitIcon {
 font-size: 18px;
 }
-.sideBar .item .sideBarLogo {
+#Home .popup .sideBar .item .sideBarLogo {
     width: 130px;
 }
-.sideBar .item .sideBarImage {
+#Home .popup .sideBar .item .sideBarImage {
     width: 130px;
 }
-.sideBar .item ul {
+#Home .popup .sideBar .item ul {
 width: auto;
 }
-.sideBar .item ul li a {
+#Home .popup .sideBar .item ul li a {
 cursor: pointer;
 font-size: 16px;
 }
-.sideBar .item h3 {
+#Home .popup .sideBar .item h3 {
     font-size: 35px;
 }
-.sideBar .item p.information {
+#Home .popup .sideBar .item p.information {
     font-size: 14px;
     text-wrap-mode: nowrap;
 }
-.sideBar .item .bookingRequest {
+#Home .popup .sideBar .item .bookingRequest {
     font-size: 18px;
 }
-.sideBar .item span.underline {
+#Home .popup .sideBar .item span.underline {
     font-size: 25px;
 }
 
@@ -257,10 +257,10 @@ font-size: 14px;
 #ContactUs .formContainer p.information {
 font-size: 15px;
 }
-.sideBar{
+#Home .popup .sideBar{
     width: 300px;
 }
-.sideBar .item {
+#Home .popup .sideBar .item {
     width: 70%;
 }
 
@@ -301,16 +301,16 @@ font-size:55px;
  #Home .carouselItem .content h2 {
     font-size: 50px;
 }
-.sideBar{
+#Home .popup .sideBar{
     width: 400px;
 }
-.sideBar .item {
+#Home .popup .sideBar .item {
     width: 65%;
 }
-.sideBar .item ul {
+#Home .popup .sideBar .item ul {
 margin: 0px 30px;
 }
-.sideBar .item p.information {
+#Home .popup .sideBar .item p.information {
     font-size: 16px;
 }
 #OurStory .part1 .content {
@@ -380,16 +380,16 @@ font-size:60px;
 #Home .carouselItem .content h2 {
     font-size: 70px;
 }
-.sideBar .item .sideBarLogo {
+#Home .popup .sideBar .item .sideBarLogo {
     width: 140px;
 }
-.sideBar .item .sideBarImage {
+#Home .popup .sideBar .item .sideBarImage {
     width: 140px;
 }
-.sideBar .item h3 {
+#Home .popup .sideBar .item h3 {
     font-size: 40px;
 }
-.sideBar .item span.underline {
+#Home .popup .sideBar .item span.underline {
     font-size: 30px;
 }
 .globalButton span {
@@ -457,7 +457,7 @@ font-size:70px;
 #Nav .logo{
     width: 150px;
 }
-.sideBar .item h3 {
+#Home .popup .sideBar .item h3 {
     font-size: 45px;
 }
 .globalButton {
@@ -542,13 +542,13 @@ font-size: 15px;
 .contentLoad .box span.borderLetter{
 font-size:80px;
 }
-    .sideBar .item h3 {
+#Home .popup .sideBar .item h3 {
     font-size: 50px;
 }
-.sideBar .item ul li {
+#Home .popup .sideBar .item ul li {
     border-bottom: 2px solid var(--p-color);
 }
-.sideBar .item ul li a {
+#Home .popup .sideBar .item ul li a {
 font-size: 16px;
 }
 #OurStory .part1 .content {

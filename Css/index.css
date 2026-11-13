@@ -187,7 +187,6 @@ background-color: var(--main-color);
 #Home .buttonsLeftAndRight button:hover i{
     color: black;
 }
-
 #Home .buttonsLeftAndRight button.next {
     right: 20px;
 }

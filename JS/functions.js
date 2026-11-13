@@ -210,8 +210,8 @@ searchInput.addEventListener("input", function () {
     appearDishes();
   } else {
     let noDishesPopup = document.querySelector(".noMatchedPopup");
-    //   separator = document.querySelector(".separatingLine");
-    // separator.classList.remove("d-lg-block");
+      separator = document.querySelector(".separatingLine");
+    separator.classList.remove("d-lg-block");
     menuItemsPart1.innerHTML = "";
     menuItemsPart2.innerHTML = "";
     noDishesPopup.classList.remove("d-none");
